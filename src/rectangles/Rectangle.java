@@ -14,9 +14,24 @@ public class Rectangle{
         this(0, 0, width, height);
     }
 
-    public Rectangle (){ this(0,0,0,0); }
-
-    public print (){
-        System.out.println("Rectangle: "+this.x1+" "+this.y1+" "+this.x2+" "+this.y2)
+    public Rectangle (){
+        this(0,0,0,0);
     }
+
+    public String toString (){
+        return "("+this.x1+", "+this.y1+"; "+this.x2+", "+this.y2+")";
+    }
+    public void print (){
+        System.out.println("Rectangle: "+this.toString());
+    }
+
+    public void move (int deltaX, int deltaY) {
+        this.x1 +=deltaX;
+        this.y1 +=deltaY;
+        this.x2 +=deltaX;
+        this.y2 +=deltaY;
+    }
+
+    
+
 }
